@@ -8,34 +8,36 @@
     <body>
 
         <h1>Cirrus Clouds</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/CirrusField-color.jpg/600px-CirrusField-color.jpg" id="id" alt="Interactive Image"></img>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/CirrusField-color.jpg/600px-CirrusField-color.jpg" id="id" alt="false" ></img>
         <script type="text/javascript">
-            var state = false;
+
             var g = document.getElementById('id');
+            g.alt = "false";
 
             function ic() {
 
-                if (state = true) {
+                if (this.alt == 'true') {
 
-                    g.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Cirrus_clouds_011.jpg/600px-Cirrus_clouds_011.jpg";
-                    state = false;
-                    return;
+                    this.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Cirrus_clouds_011.jpg/600px-Cirrus_clouds_011.jpg";
+                    this.alt = 'false';
+
                 } else {
 
-                    g.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/CirrusField-color.jpg/600px-CirrusField-color.jpg";
-                    state = true;
-                    return;
+                    this.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/CirrusField-color.jpg/600px-CirrusField-color.jpg";
+                    this.alt = 'true';
+
                 }
-                location.reload();
+
             }
             g.onclick = ic;
         </script>
         <h3>Altitude</h3><br>
         <p>Cirrus clouds usally form anywhere in between 4,000 and 20,000 meters (13,000 and 66,000 feet) (4 km and 20 km) or higher above sea level</p>
-        <h3>Aperance</h3><br>
+        <h3>Apearance</h3><br>
         <p>Cirrus cloud usally have white stripes and are spread-out</p>
         <h3>Formation</h3><br>
         <p>Cirrus clouds are usually formed as warm, dry air rises, causing water vapor to under go deposition (going to solid straight from a gas without turning into liquid) onto rocky or metallic dust particles at high altitudes. </p>
-
+        <h2>More Resources</h1>
+            <iframe src="https://en.wikipedia.org/wiki/Cirrus_cloud" width="1000" height="1000"></iframe>
     </body>
 </html>
